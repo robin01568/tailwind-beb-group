@@ -62,86 +62,154 @@
                     <i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
                     <p class="text-sm">Add Cart</p>
                 </div>
-                <div class="flex items-center space-x-1">
+                <div class="text-center">
                     <i class="fa-solid fa-gift text-[#DE0025]"></i>
                     <p class="text-sm">
-                        <span class="font-semibold text-[#DE0025]">Offers</span> <br>
-                        <span>Latest Offers</span>
+                        <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
                     </p>
                 </div>
                 <div class="flex items-center space-x-1">
-                    <i class="fa-regular fa-user text-[#DE0025]"></i>
-                    <p class="text-sm">
-                        <span class="font-semibold text-[#DE0025]">Account</span> <br>
-                        <span>Register Or Login</span>
-                    </p>
+                    <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
+                    <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log In</a>
                 </div>
             </div>
-            <div class="block lg:hidden drawer">
-                <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content">
-                    <!-- Page content here -->
-                    <label for="my-drawer" class="btn text-white bg-[#DE0025] drawer-button"><i
-                            class="fa-solid fa-bars"></i></label>
-                </div>
-                <div class="drawer-side">
-                    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-                    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                        <!-- Sidebar content here -->
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
-                    </ul>
+            <div class="block lg:hidden">
+                <div class="drawer">
+                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <!-- Page content here -->
+                        <label for="my-drawer" class="btn text-white bg-[#DE0025] drawer-button"><i
+                                class="fa-solid fa-bars"></i></label>
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 space-y-2">
+                            <!-- Sidebar content here -->
+                            <li class="border-b border-[#149E4A]">
+                                <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="w-28">
+                            </li>
+                            <li>
+                                <a><i class="fa-regular fa-heart text-[#DE0025]"></i>
+                                    <p class="text-sm">Wishlist</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a><i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
+                                    <p class="text-sm">Add Cart</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a><i class="fa-solid fa-gift text-[#DE0025]"></i>
+                                    <p class="text-sm">
+                                        <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="grid grid-cols-2 gap-2">
+                                <a href=""
+                                    class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
+                                <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log In</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="bg-[#DE0025]">
-        <div class="container mx-auto flex items-center justify-between">
-            <div class="dropdown dropdown-start">
-                <div tabindex="0" role="button" class="btn m-1">All Categories ⬇</div>
-                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <header class="hidden md:block bg-[#DE0025]">
+        <div class="container mx-auto flex items-center justify-between py-2 px-2 lg:px-0">
+
+            <div class="dropdown dropdown-hover">
+                <div tabindex="0" role="button" class="text-white py-2 cursor-pointer flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group"></i>
+                    All Categories
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+
+                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-full shadow-sm px-0">
                     <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
+
+                    <!-- Level 1 -->
+                    <li class="relative group">
+                        <div tabindex="0" role="button" class="flex items-center justify-between">
+                            Item 2
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+
+                        <!-- Level 2 -->
+                        <ul
+                            class="absolute left-full top-0 hidden group-hover:block menu bg-base-100 rounded-box w-48 p-2 shadow-sm">
+                            <li><a>Sub Item 1</a></li>
+                            <li class="relative group">
+                                <div tabindex="0" role="button" class="flex items-center justify-between">
+                                    Sub Item 2
+                                    <i class="fa-solid fa-caret-right"></i>
+                                </div>
+
+                                <!-- Level 3 -->
+                                <ul
+                                    class="absolute left-full top-0 hidden group-hover:block menu bg-base-100 rounded-box w-48 p-2 shadow-sm">
+                                    <li><a>Sub Sub Item 1</a></li>
+                                    <li class="relative group">
+                                        <div tabindex="0" role="button" class="flex items-center justify-between">
+                                            Sub Sub Item 2
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+
+                                        <!-- Level 4 -->
+                                        <ul
+                                            class="absolute left-full top-0 hidden group-hover:block menu bg-base-100 rounded-box w-48 p-2 shadow-sm">
+                                            <li><a>4th Level Item 1</a></li>
+                                            <li><a>4th Level Item 2</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a>Item 3</a></li>
                 </ul>
             </div>
-            <div class="">
 
+            <div class="flex items-center space-x-3">
+                <a href="" class="btn font-semibold text-white bg-transparent">Photo Gallery</a>
+                <a href="" class="btn font-semibold text-white bg-transparent"><i class="fa-solid fa-mobile-screen"></i>
+                    01700000000</a>
+                <div class="hidden lg:block flex items-center space-x-3 text-lg">
+                    <i class="fa-brands fa-facebook-f text-white"></i>
+                    <i class="fa-brands fa-instagram text-white"></i>
+                    <i class="fa-brands fa-linkedin-in text-white"></i>
+                    <i class="fa-brands fa-youtube text-white"></i>
+                </div>
             </div>
         </div>
     </header>
 
 
     <!-- Carousel -->
-    <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide4" class="btn btn-circle">❮</a>
-                <a href="#slide2" class="btn btn-circle">❯</a>
+    <div class="w-full">
+        <div class="carousel w-full">
+            <div id="item1" class="carousel-item w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" />
+            </div>
+            <div id="item2" class="carousel-item w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
+            </div>
+            <div id="item3" class="carousel-item w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
+            </div>
+            <div id="item4" class="carousel-item w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
             </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide1" class="btn btn-circle">❮</a>
-                <a href="#slide3" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide3" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide2" class="btn btn-circle">❮</a>
-                <a href="#slide4" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide4" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide3" class="btn btn-circle">❮</a>
-                <a href="#slide1" class="btn btn-circle">❯</a>
-            </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#item1" class="btn btn-xs">1</a>
+            <a href="#item2" class="btn btn-xs">2</a>
+            <a href="#item3" class="btn btn-xs">3</a>
+            <a href="#item4" class="btn btn-xs">4</a>
         </div>
     </div>
 
@@ -152,53 +220,66 @@
             <h5 class="text-xs md:text-sm text-slate-700">Get Your Desired Product from Featured Category</h5>
         </div>
         <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-4">
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
-            <div class="card bg-base-100 w-full shadow-sm text-center">
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
                 <figure class="w-full aspect-square">
                     <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full object-fit" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+            </div>
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
+                <figure class="w-full aspect-square">
+                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full object-fit" />
+                </figure>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+            </div>
+            <div class="group card bg-base-100 w-full text-center shadow-sm hover:shadow-[#DE0025]/30">
+                <figure class="w-full aspect-square">
+                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full object-fit" />
+                </figure>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
             </div>
 
         </div>
@@ -213,9 +294,10 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
 
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -245,9 +327,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -277,9 +360,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -309,9 +393,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -341,6 +426,7 @@
                     </div>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -352,9 +438,10 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
 
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -384,9 +471,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -416,9 +504,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -448,9 +537,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -480,9 +570,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -512,9 +603,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -544,9 +636,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -576,9 +669,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -608,9 +702,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -640,9 +735,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -672,9 +768,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -704,9 +801,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -736,9 +834,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -768,9 +867,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -800,9 +900,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -832,9 +933,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -864,9 +966,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -896,9 +999,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -928,9 +1032,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -960,9 +1065,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -992,9 +1098,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/p1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -1024,9 +1131,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-100 shadow-sm">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
                 <figure class="w-full aspect-square border-b border-slate-300 relative">
-                    <img src="/assets/img/c1.png" alt="Shoes" class="w-full h-full" />
+                    <img src="/assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
+                    <img src="/assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                     <div
                         class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
                         -10% Off</div>
@@ -1056,13 +1164,11 @@
                     </div>
                 </div>
             </div>
-
-
 
         </div>
         <div class="flex items-center justify-center py-5">
             <a href="javascript:void(0)"
-                class="btn btn-outline text-sm md:text-lg text-[#DE0025] hover:text-white border border-[#DE0025]">LOAD
+                class="btn btn-outline text-sm md:text-lg text-[#DE0025] border-2 border-[#DE0025] hover:text-white hover:bg-[#149E4A] hover:border-0">LOAD
                 MORE</a>
         </div>
     </div>
