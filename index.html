@@ -48,7 +48,8 @@
                     <img src="assets/img/logo.png" alt="BEB GROUP LOGO">
                 </a>
                 <div class="hidden md:block w-96 xl:w-150">
-                    <label class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
+                    <label
+                        class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
                         <input type="search" class="grow" placeholder="Search in beb" />
                         <span class="flex items-center justify-center h-full aspect-square bg-[#DE0025]">
                             <svg class="h-[1.3em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -96,6 +97,66 @@
                                 <li class="border-b border-[#149E4A]">
                                     <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="w-28">
                                 </li>
+
+                                <li>
+                                    <div class="flex flex-col justify-self-start hover:bg-transparent">
+                                        <!-- Parent -->
+                                        <div class="cursor-pointer flex items-center gap-2 text-[#838376] justify-between"
+                                            onclick="this.nextElementSibling.classList.toggle('hidden')">
+                                            <div class="flex items-center gap-2">
+                                                <i class="fa-solid fa-layer-group text-[#DE0025]"></i>
+                                                All Categories
+                                            </div>
+                                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                        </div>
+
+                                        <!-- Level 1 -->
+                                        <ul class="hidden w-full pl-2 mx-0 before:bg-transparent">
+                                            <li><a class="block">Item 1</a></li>
+                                            <li>
+                                                <div class="flex items-center justify-between cursor-pointer"
+                                                    onclick="this.nextElementSibling.classList.toggle('hidden')">
+                                                    Item 2
+                                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                                </div>
+
+                                                <!-- Level 2 (now vertical, below) -->
+                                                <ul class="hidden pl-3 mx-0 before:bg-transparent">
+                                                    <li><a class="block">Sub Item 1</a></li>
+                                                    <li>
+                                                        <div class="flex items-center justify-between cursor-pointer"
+                                                            onclick="this.nextElementSibling.classList.toggle('hidden')">
+                                                            Sub Item 2
+                                                            <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                                        </div>
+
+                                                        <!-- Level 3 (vertical below parent) -->
+                                                        <ul class="hidden pl-4 mx-0 before:bg-transparent">
+                                                            <li><a class="block">Sub Sub Item 1</a></li>
+                                                            <li>
+                                                                <div class="flex items-center justify-between cursor-pointer"
+                                                                    onclick="this.nextElementSibling.classList.toggle('hidden')">
+                                                                    Sub Sub Item 2
+                                                                    <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                                                                </div>
+                                                                <!-- Level 4 (vertical) -->
+                                                                <ul class="hidden pl-5 mx-0 before:bg-transparent">
+                                                                    <li><a class="block">4th Level Item 1</a></li>
+                                                                    <li><a class="block">4th Level Item 2</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li><a class="block">Item 3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
                                 <li>
                                     <a><i class="fa-regular fa-heart text-[#DE0025]"></i>
                                         <p class="text-sm text-[#838376]">Wishlist</p>
@@ -125,7 +186,8 @@
                 </div>
             </div>
             <div class="md:hidden w-full">
-                <label class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
+                <label
+                    class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
                     <input type="search" class="grow" placeholder="Search in beb" />
                     <span class="flex items-center justify-center h-full aspect-square bg-[#DE0025]">
                         <svg class="h-[1.3em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -152,41 +214,56 @@
                     <i class="fa-solid fa-caret-down"></i>
                 </div>
 
-                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-full shadow-sm px-0">
+                <!-- Level 1 -->
+                <ul tabindex="0" class="dropdown-content menu bg-base-100 shadow-sm w-56 z-20 px-0">
                     <li><a>Item 1</a></li>
 
-                    <!-- Level 1 -->
-                    <li class="relative group">
-                        <div tabindex="0" role="button" class="flex items-center justify-between">
+                    <li class="relative group/f1">
+                        <div class="flex items-center justify-between cursor-pointer">
                             Item 2
                             <i class="fa-solid fa-caret-right"></i>
                         </div>
 
                         <!-- Level 2 -->
                         <ul
-                            class="absolute left-full top-0 hidden group-hover:block menu bg-base-100 rounded-box w-48 p-2 shadow-sm">
+                            class="absolute top-0 left-full hidden group-hover/f1:block menu bg-base-100 w-56 py-2 px-0 shadow-md z-30 mx-0">
                             <li><a>Sub Item 1</a></li>
-                            <li class="relative group">
-                                <div tabindex="0" role="button" class="flex items-center justify-between">
+
+                            <li class="relative group/s1">
+                                <div class="flex items-center justify-between cursor-pointer">
                                     Sub Item 2
                                     <i class="fa-solid fa-caret-right"></i>
                                 </div>
 
                                 <!-- Level 3 -->
                                 <ul
-                                    class="absolute left-full top-0 hidden group-hover:block menu bg-base-100 rounded-box w-48 p-2 shadow-sm">
+                                    class="absolute top-0 left-full hidden group-hover/s1:block menu bg-base-100 w-56 py-2 px-0 shadow-md z-40 mx-0">
                                     <li><a>Sub Sub Item 1</a></li>
-                                    <li class="relative group">
-                                        <div tabindex="0" role="button" class="flex items-center justify-between">
+
+                                    <li class="relative group/t1">
+                                        <div class="flex items-center justify-between cursor-pointer">
                                             Sub Sub Item 2
                                             <i class="fa-solid fa-caret-right"></i>
                                         </div>
 
                                         <!-- Level 4 -->
                                         <ul
-                                            class="absolute left-full top-0 hidden group-hover:block menu bg-base-100 rounded-box w-48 p-2 shadow-sm">
+                                            class="absolute top-0 left-full hidden group-hover/t1:block menu bg-base-100 w-56 py-2 px-0 shadow-md z-50 mx-0">
                                             <li><a>4th Level Item 1</a></li>
                                             <li><a>4th Level Item 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/t2">
+                                        <div class="flex items-center justify-between cursor-pointer">
+                                            Sub Sub Item 3
+                                            <i class="fa-solid fa-caret-right"></i>
+                                        </div>
+
+                                        <!-- Level 4 -->
+                                        <ul
+                                            class="absolute top-0 left-full hidden group-hover/t2:block menu bg-base-100 w-56 py-2 px-0 shadow-md z-50 mx-0">
+                                            <li><a>4th Level Item 3</a></li>
+                                            <li><a>4th Level Item 4</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -236,13 +313,13 @@
         </div>
 
         <!-- Indicators -->
-        <div id="indicators" class="absolute bottom-5 flex w-full justify-center gap-2 py-2 z-10">
-            <button class="indicator w-3 h-3 bg-red-500 rounded-full"></button>
-            <button class="indicator w-3 h-3 bg-white rounded-full"></button>
-            <button class="indicator w-3 h-3 bg-white rounded-full"></button>
-            <button class="indicator w-3 h-3 bg-white rounded-full"></button>
-            <button class="indicator w-3 h-3 bg-white rounded-full"></button>
-            <button class="indicator w-3 h-3 bg-white rounded-full"></button>
+        <div id="indicators" class="absolute bottom-1 md:bottom-5 flex w-full justify-center gap-2 py-2 z-10">
+            <button class="indicator w-1.5 md:w-3 h-1.5 md:h-3 bg-red-500 rounded-full"></button>
+            <button class="indicator w-1.5 md:w-3 h-1.5 md:h-3 bg-white rounded-full"></button>
+            <button class="indicator w-1.5 md:w-3 h-1.5 md:h-3 bg-white rounded-full"></button>
+            <button class="indicator w-1.5 md:w-3 h-1.5 md:h-3 bg-white rounded-full"></button>
+            <button class="indicator w-1.5 md:w-3 h-1.5 md:h-3 bg-white rounded-full"></button>
+            <button class="indicator w-1.5 md:w-3 h-1.5 md:h-3 bg-white rounded-full"></button>
         </div>
     </div>
     <!-- Carousel JS -->
@@ -376,7 +453,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-4 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -394,7 +471,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col lg:flex-row items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
                         <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
@@ -418,7 +495,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-4 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -436,7 +513,49 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col lg:flex-row items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col lg:flex-row items-center text-center gap-1">
+                        <!-- You can open the modal using ID.showModal() method -->
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                            onclick="my_modal_3.showModal()">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>ADD TO CARD</span>
+                        </a>
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                            onclick="my_modal_3.showModal()">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
+                <a href="product_details.html">
+                    <figure class="w-full aspect-square border-b border-slate-300 relative">
+                        <img src="assets/img/p1.png" alt="Shoes"
+                            class="group-hover:hidden w-full h-full object-cover" />
+                        <img src="assets/img/c1.png" alt="Shoes"
+                            class="hidden group-hover:block w-full h-full object-cover" />
+                        <div
+                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            -10% Off</div>
+                    </figure>
+                </a>
+                <div class="p-2 lg:p-4 space-y-2">
+                    <a href="product_details.html">
+                        <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
+                    </a>
+                    <p class="text-sm md:text-md">
+                        <span class="text-[#DE0025]">
+                            <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
+                        <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
+                                85,000</del></span>
+                    </p>
+                    <p class="hidden md:block text-sm text-slate-300">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(0)</span>
+                    </p>
+                    <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
                         <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
@@ -460,7 +579,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-4 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -478,49 +597,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col lg:flex-row items-center text-center gap-2 pb-2">
-                        <!-- You can open the modal using ID.showModal() method -->
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
-                            onclick="my_modal_3.showModal()">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>ADD TO CARD</span>
-                        </a>
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
-                            onclick="my_modal_3.showModal()">BUY NOW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
-                <a href="product_details.html">
-                    <figure class="w-full aspect-square border-b border-slate-300 relative">
-                        <img src="assets/img/c1.png" alt="Shoes"
-                            class="group-hover:hidden w-full h-full object-cover" />
-                        <img src="assets/img/p1.png" alt="Shoes"
-                            class="hidden group-hover:block w-full h-full object-cover" />
-                        <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
-                            -10% Off</div>
-                    </figure>
-                </a>
-                <div class="p-2 space-y-2">
-                    <a href="product_details.html">
-                        <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
-                    </a>
-                    <p class="text-sm md:text-md">
-                        <span class="text-[#DE0025]">
-                            <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
-                        <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
-                                85,000</del></span>
-                    </p>
-                    <p class="hidden md:block text-sm text-slate-300">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(0)</span>
-                    </p>
-                    <div class="flex flex-col lg:flex-row items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
                         <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
@@ -553,7 +630,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -571,7 +648,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -592,7 +669,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -610,7 +687,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -631,7 +708,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -649,7 +726,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -670,7 +747,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -688,7 +765,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -709,7 +786,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -727,7 +804,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -748,7 +825,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -766,7 +843,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -787,7 +864,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -805,7 +882,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -826,7 +903,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -844,7 +921,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -865,7 +942,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -883,7 +960,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -904,7 +981,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -922,7 +999,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -943,7 +1020,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -961,7 +1038,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -982,7 +1059,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1000,7 +1077,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -1021,7 +1098,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1039,7 +1116,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -1060,7 +1137,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1078,7 +1155,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -1099,7 +1176,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1117,7 +1194,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -1138,7 +1215,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1156,7 +1233,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -1177,7 +1254,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1195,7 +1272,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -1216,7 +1293,7 @@
                             -10% Off</div>
                     </figure>
                 </a>
-                <div class="p-2 space-y-2">
+                <div class="p-2 lg:p-3 space-y-2">
                     <a href="product_details.html">
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
@@ -1234,85 +1311,7 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(0)</span>
                     </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
-                            onclick="my_modal_3.showModal()">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>ADD TO CARD</span>
-                        </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
-                            onclick="my_modal_3.showModal()">BUY NOW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
-                <a href="product_details.html">
-                    <figure class="w-full aspect-square border-b border-slate-300 relative">
-                        <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
-                        <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
-                        <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
-                            -10% Off</div>
-                    </figure>
-                </a>
-                <div class="p-2 space-y-2">
-                    <a href="product_details.html">
-                        <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
-                    </a>
-                    <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
-                            <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
-                        <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
-                                85,000</del></span>
-                    </p>
-                    <p class="hidden md:block text-xs text-slate-300">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(0)</span>
-                    </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
-                            onclick="my_modal_3.showModal()">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>ADD TO CARD</span>
-                        </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
-                            onclick="my_modal_3.showModal()">BUY NOW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
-                <a href="product_details.html">
-                    <figure class="w-full aspect-square border-b border-slate-300 relative">
-                        <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
-                        <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
-                        <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
-                            -10% Off</div>
-                    </figure>
-                </a>
-                <div class="p-2 space-y-2">
-                    <a href="product_details.html">
-                        <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
-                    </a>
-                    <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
-                            <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
-                        <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
-                                85,000</del></span>
-                    </p>
-                    <p class="hidden md:block text-xs text-slate-300">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(0)</span>
-                    </p>
-                    <div class="flex flex-col items-center text-center gap-2 pb-2">
+                    <div class="flex flex-col items-center text-center gap-1">
                         <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
