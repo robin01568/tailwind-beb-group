@@ -16,10 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- 
-    color:- green: #149E4A
-            red: #DE0025
-    -->
 
     <!-- CSS Variables & Font Styling -->
     <style type="text/tailwindcss">
@@ -46,12 +42,90 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar bg-base-100 shadow-sm">
-        <div class="container mx-auto flex items-center justify-between">
-            <div class="">
-                <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="BEB GROUP LOGO">
+                </a>
+                <div class="hidden md:block w-96 xl:w-150">
+                    <label class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
+                        <input type="search" class="grow" placeholder="Search in beb" />
+                        <span class="flex items-center justify-center h-full aspect-square bg-[#DE0025]">
+                            <svg class="h-[1.3em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                    stroke="white">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </label>
+                </div>
+                <div class="hidden lg:flex items-center space-x-5">
+                    <div class="text-center">
+                        <i class="fa-regular fa-heart text-[#DE0025]"></i>
+                        <p class="text-sm">Wishlist</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
+                        <p class="text-sm">Add Cart</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-gift text-[#DE0025]"></i>
+                        <p class="text-sm">
+                            <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
+                        <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log In</a>
+                    </div>
+                </div>
+                <div class="block lg:hidden z-50">
+                    <div class="drawer">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <!-- Page content here -->
+                            <label for="my-drawer" class="btn text-white bg-[#DE0025] drawer-button"><i
+                                    class="fa-solid fa-bars"></i></label>
+                        </div>
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 space-y-2">
+                                <!-- Sidebar content here -->
+                                <li class="border-b border-[#149E4A]">
+                                    <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="w-28">
+                                </li>
+                                <li>
+                                    <a><i class="fa-regular fa-heart text-[#DE0025]"></i>
+                                        <p class="text-sm text-[#838376]">Wishlist</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a><i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
+                                        <p class="text-sm text-[#838376]">Add Cart</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a><i class="fa-solid fa-gift text-[#DE0025]"></i>
+                                        <p class="text-sm">
+                                            <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="grid grid-cols-2 gap-2">
+                                    <a href=""
+                                        class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
+                                    <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log
+                                        In</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="">
-                <label class="input w-44 md:w-62 lg:w-96 pr-0">
+            <div class="md:hidden w-full">
+                <label class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
                     <input type="search" class="grow" placeholder="Search in beb" />
                     <span class="flex items-center justify-center h-full aspect-square bg-[#DE0025]">
                         <svg class="h-[1.3em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -63,67 +137,6 @@
                         </svg>
                     </span>
                 </label>
-            </div>
-            <div class="hidden lg:flex items-center space-x-5">
-                <div class="text-center">
-                    <i class="fa-regular fa-heart text-[#DE0025]"></i>
-                    <p class="text-sm">Wishlist</p>
-                </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
-                    <p class="text-sm">Add Cart</p>
-                </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-gift text-[#DE0025]"></i>
-                    <p class="text-sm">
-                        <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
-                    </p>
-                </div>
-                <div class="flex items-center space-x-1">
-                    <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
-                    <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log In</a>
-                </div>
-            </div>
-            <div class="block lg:hidden">
-                <div class="drawer">
-                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-                    <div class="drawer-content">
-                        <!-- Page content here -->
-                        <label for="my-drawer" class="btn text-white bg-[#DE0025] drawer-button"><i
-                                class="fa-solid fa-bars"></i></label>
-                    </div>
-                    <div class="drawer-side">
-                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-                        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 space-y-2">
-                            <!-- Sidebar content here -->
-                            <li class="border-b border-[#149E4A]">
-                                <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="w-28">
-                            </li>
-                            <li>
-                                <a><i class="fa-regular fa-heart text-[#DE0025]"></i>
-                                    <p class="text-sm text-[#838376]">Wishlist</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a><i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
-                                    <p class="text-sm text-[#838376]">Add Cart</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a><i class="fa-solid fa-gift text-[#DE0025]"></i>
-                                    <p class="text-sm">
-                                        <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="grid grid-cols-2 gap-2">
-                                <a href=""
-                                    class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
-                                <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log In</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
@@ -198,7 +211,6 @@
             </div>
         </div>
     </header>
-
 
     <!-- Carousel -->
     <div class="w-full relative">
@@ -345,7 +357,7 @@
     <!-- FlashSale -->
     <div class="container mx-auto p-5">
         <div class="flex items-center justify-between pb-5">
-            <h2 class="font-bold text-md md:text-2xl">Featured Category</h2>
+            <h2 class="font-bold text-md md:text-2xl">Flash Sale</h2>
             <a href="javascript:void(0)"
                 class="btn btn-outline text-xs md:text-sm text-[#149E4A] hover:bg-[#149E4A] hover:text-white">More
                 Product</a>
@@ -1451,7 +1463,6 @@
             <img src="assets/img/ssl.png" alt="SSL Certificate" class="">
         </div>
     </footer>
-
 
 </body>
 
