@@ -29,7 +29,7 @@
 
         body {
             font-family: "Inter", sans-serif;
-            background-color: #F5F5F5;
+            background-color: var(--color-theme4);
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -49,9 +49,9 @@
                 </a>
                 <div class="hidden md:block w-96 xl:w-150">
                     <label
-                        class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
+                        class="input focus-within:border-[var(--color-theme2)] focus-within:ring-0 focus-within:outline-none w-full pr-0">
                         <input type="search" class="grow" placeholder="Search in beb" />
-                        <span class="flex items-center justify-center h-full aspect-square bg-[#DE0025]">
+                        <span class="flex items-center justify-center h-full aspect-square bg-[var(--color-theme1)]">
                             <svg class="h-[1.3em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
                                     stroke="white">
@@ -64,22 +64,22 @@
                 </div>
                 <div class="hidden lg:flex items-center space-x-5">
                     <div class="text-center">
-                        <i class="fa-regular fa-heart text-[#DE0025]"></i>
+                        <i class="fa-regular fa-heart text-[var(--color-theme1)]"></i>
                         <p class="text-sm">Wishlist</p>
                     </div>
                     <div class="text-center">
-                        <i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
+                        <i class="fa-solid fa-cart-shopping text-[var(--color-theme1)]"></i>
                         <p class="text-sm">Add Cart</p>
                     </div>
                     <div class="text-center">
-                        <i class="fa-solid fa-gift text-[#DE0025]"></i>
+                        <i class="fa-solid fa-gift text-[var(--color-theme1)]"></i>
                         <p class="text-sm">
-                            <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
+                            <span>Latest <span class="font-semibold text-[var(--color-theme1)]">Offers</span></span>
                         </p>
                     </div>
                     <div class="flex items-center space-x-1">
-                        <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
-                        <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log In</a>
+                        <a href="" class="btn text-white bg-linear-to-r from-[var(--color-theme1)] to-[var(--color-theme2)]">Register</a>
+                        <a href="" class="btn text-white bg-linear-to-r from-[var(--color-theme1)] to-[var(--color-theme2)]">Log In</a>
                     </div>
                 </div>
                 <div class="block lg:hidden z-50">
@@ -87,24 +87,24 @@
                         <input id="my-drawer" type="checkbox" class="drawer-toggle" />
                         <div class="drawer-content">
                             <!-- Page content here -->
-                            <label for="my-drawer" class="btn text-white bg-[#DE0025] drawer-button"><i
+                            <label for="my-drawer" class="btn text-white bg-[var(--color-theme1)] drawer-button"><i
                                     class="fa-solid fa-bars"></i></label>
                         </div>
                         <div class="drawer-side">
                             <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                             <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 space-y-2">
                                 <!-- Sidebar content here -->
-                                <li class="border-b border-[#149E4A]">
+                                <li class="border-b border-[var(--color-theme2)]">
                                     <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="w-28">
                                 </li>
                                 <!-- Category -->
                                 <li>
                                     <div class="flex flex-col items-start hover:bg-transparent">
                                         <!-- Parent -->
-                                        <div class="cursor-pointer flex items-center justify-between gap-2 text-[#838376]"
+                                        <div class="cursor-pointer flex items-center justify-between gap-2 text-[var(--color-theme3)]"
                                             onclick="this.nextElementSibling.classList.toggle('hidden')">
                                             <div class="flex items-center gap-2">
-                                                <i class="fa-solid fa-layer-group text-[#DE0025]"></i>
+                                                <i class="fa-solid fa-layer-group text-[var(--color-theme1)]"></i>
                                                 All Categories
                                             </div>
                                             <i class="fa-solid fa-caret-down transition-transform duration-300"></i>
@@ -159,26 +159,26 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a><i class="fa-regular fa-heart text-[#DE0025]"></i>
-                                        <p class="text-sm text-[#838376]">Wishlist</p>
+                                    <a><i class="fa-regular fa-heart text-[var(--color-theme1)]"></i>
+                                        <p class="text-sm text-[var(--color-theme3)]">Wishlist</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a><i class="fa-solid fa-cart-shopping text-[#DE0025]"></i>
-                                        <p class="text-sm text-[#838376]">Add Cart</p>
+                                    <a><i class="fa-solid fa-cart-shopping text-[var(--color-theme1)]"></i>
+                                        <p class="text-sm text-[var(--color-theme3)]">Add Cart</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a><i class="fa-solid fa-gift text-[#DE0025]"></i>
+                                    <a><i class="fa-solid fa-gift text-[var(--color-theme1)]"></i>
                                         <p class="text-sm">
-                                            <span>Latest <span class="font-semibold text-[#DE0025]">Offers</span></span>
+                                            <span>Latest <span class="font-semibold text-[var(--color-theme1)]">Offers</span></span>
                                         </p>
                                     </a>
                                 </li>
                                 <li class="grid grid-cols-2 gap-2">
                                     <a href=""
-                                        class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Register</a>
-                                    <a href="" class="btn text-white bg-linear-to-r from-[#DE0025] to-[#149E4A]">Log
+                                        class="btn text-white bg-linear-to-r from-[var(--color-theme1)] to-[var(--color-theme2)]">Register</a>
+                                    <a href="" class="btn text-white bg-linear-to-r from-[var(--color-theme1)] to-[var(--color-theme2)]">Log
                                         In</a>
                                 </li>
                             </ul>
@@ -188,9 +188,9 @@
             </div>
             <div class="md:hidden w-full">
                 <label
-                    class="input focus-within:border-[#149E4A] focus-within:ring-0 focus-within:outline-none w-full pr-0">
+                    class="input focus-within:border-[var(--color-theme2)] focus-within:ring-0 focus-within:outline-none w-full pr-0">
                     <input type="search" class="grow" placeholder="Search in beb" />
-                    <span class="flex items-center justify-center h-full aspect-square bg-[#DE0025]">
+                    <span class="flex items-center justify-center h-full aspect-square bg-[var(--color-theme1)]">
                         <svg class="h-[1.3em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
                                 stroke="white">
@@ -205,7 +205,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="hidden md:block bg-[#DE0025]">
+    <header class="hidden md:block bg-[var(--color-theme1)]">
         <div class="container mx-auto flex items-center justify-between py-2 px-2 lg:px-0">
 
             <div class="dropdown dropdown-hover">
@@ -341,11 +341,11 @@
 
             // Update active indicator
             indicators.forEach((dot, idx) => {
-                dot.classList.remove('bg-[#DE0025]');
+                dot.classList.remove('bg-[var(--color-theme1)]');
                 dot.classList.add('bg-white');
                 if (idx === index) {
                     dot.classList.remove('bg-white');
-                    dot.classList.add('bg-[#DE0025]');
+                    dot.classList.add('bg-[var(--color-theme1)]');
                 }
             });
         }
@@ -377,56 +377,56 @@
                 <figure class="w-full aspect-square">
                     <img src="assets/img/p1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/c1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/p1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/c1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/p1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/c1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/p1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
             <a href=""
                 class="group card bg-base-100 w-full text-center rounded-sm hover:shadow-[0_0_5px_1px_rgba(222,0,37,0.4)]">
                 <figure class="w-full aspect-square">
                     <img src="assets/img/c1.png" alt="Shoes" class="w-full h-full object-cover" />
                 </figure>
-                <h3 class="font-semibold text-sm py-2 group-hover:text-[#149E4A]">Battery</h3>
+                <h3 class="font-semibold text-sm py-2 group-hover:text-[var(--color-theme2)]">Battery</h3>
             </a>
 
         </div>
@@ -437,12 +437,12 @@
         <div class="flex items-center justify-between pb-5">
             <h2 class="font-bold text-md md:text-2xl">Flash Sale</h2>
             <a href="javascript:void(0)"
-                class="btn btn-outline text-xs md:text-sm text-[#149E4A] hover:bg-[#149E4A] hover:text-white">More
+                class="btn btn-outline text-xs md:text-sm text-[var(--color-theme2)] hover:bg-[var(--color-theme2)] hover:text-white">More
                 Product</a>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
 
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/30 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes"
@@ -450,7 +450,7 @@
                         <img src="assets/img/c1.png" alt="Shoes"
                             class="hidden group-hover:block w-full h-full object-cover" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -459,7 +459,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-sm md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -474,17 +474,17 @@
                     </p>
                     <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/30 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes"
@@ -492,7 +492,7 @@
                         <img src="assets/img/p1.png" alt="Shoes"
                             class="hidden group-hover:block w-full h-full object-cover" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -501,7 +501,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-sm md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -516,17 +516,17 @@
                     </p>
                     <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/30 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes"
@@ -534,7 +534,7 @@
                         <img src="assets/img/c1.png" alt="Shoes"
                             class="hidden group-hover:block w-full h-full object-cover" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -543,7 +543,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-sm md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -558,17 +558,17 @@
                     </p>
                     <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/30 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/30 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes"
@@ -576,7 +576,7 @@
                         <img src="assets/img/p1.png" alt="Shoes"
                             class="hidden group-hover:block w-full h-full object-cover" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -585,7 +585,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-sm md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -600,12 +600,12 @@
                     </p>
                     <div class="flex flex-col lg:flex-row items-center text-center gap-1">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full lg:w-1/2 py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
@@ -621,13 +621,13 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
 
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -636,7 +636,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -650,23 +650,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -675,7 +675,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -689,23 +689,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -714,7 +714,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -728,23 +728,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -753,7 +753,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -767,23 +767,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -792,7 +792,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -806,23 +806,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -831,7 +831,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -845,23 +845,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -870,7 +870,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -884,23 +884,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -909,7 +909,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -923,23 +923,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -948,7 +948,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -962,23 +962,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -987,7 +987,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1001,23 +1001,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1026,7 +1026,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1040,23 +1040,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1065,7 +1065,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1079,23 +1079,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1104,7 +1104,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1118,23 +1118,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1143,7 +1143,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1157,23 +1157,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1182,7 +1182,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1196,23 +1196,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1221,7 +1221,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1235,23 +1235,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/p1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/c1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1260,7 +1260,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1274,23 +1274,23 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
             </div>
-            <div class="group card bg-base-100 shadow-md hover:shadow-[#149E4A]/40 cursor-pointer rounded-none">
+            <div class="group card bg-base-100 shadow-md hover:shadow-[var(--color-theme2)]/40 cursor-pointer rounded-none">
                 <a href="product_details.html">
                     <figure class="w-full aspect-square border-b border-slate-300 relative">
                         <img src="assets/img/c1.png" alt="Shoes" class="group-hover:hidden w-full h-full" />
                         <img src="assets/img/p1.png" alt="Shoes" class="hidden group-hover:block w-full h-full" />
                         <div
-                            class="absolute top-3 left-3 text-xs text-white bg-[#DE0025] px-2 py-1 rounded-tl-lg rounded-br-lg">
+                            class="absolute top-3 left-3 text-xs text-white bg-[var(--color-theme1)] px-2 py-1 rounded-tl-lg rounded-br-lg">
                             -10% Off</div>
                     </figure>
                 </a>
@@ -1299,7 +1299,7 @@
                         <h2 class="text-sm md:text-md">550ml children's drink water bottle with cartoon...</h2>
                     </a>
                     <p class="text-xs md:text-md">
-                        <span class="text-[#DE0025]">
+                        <span class="text-[var(--color-theme1)]">
                             <i class="fa-solid fa-bangladeshi-taka-sign"></i> 80,900</span>
                         <span class="text-slate-500"><del><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                 85,000</del></span>
@@ -1313,12 +1313,12 @@
                         <span>(0)</span>
                     </p>
                     <div class="flex flex-col items-center text-center gap-1">
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#DE0025]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme1)]"
                             onclick="my_modal_3.showModal()">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>ADD TO CARD</span>
                         </a>
-                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[#149E4A]"
+                        <a class="w-full py-2 rounded text-xs md:text-sm text-white bg-[var(--color-theme2)]"
                             onclick="my_modal_3.showModal()">BUY NOW</a>
                     </div>
                 </div>
@@ -1327,20 +1327,20 @@
         </div>
         <div class="flex items-center justify-center py-5">
             <a href="javascript:void(0)"
-                class="btn btn-outline text-sm md:text-lg text-[#DE0025] border-2 border-[#DE0025] hover:text-white hover:bg-[#149E4A] hover:border-0">LOAD
+                class="btn btn-outline text-sm md:text-lg text-[var(--color-theme1)] border-2 border-[var(--color-theme1)] hover:text-white hover:bg-[var(--color-theme2)] hover:border-0">LOAD
                 MORE</a>
         </div>
     </div>
 
     <!-- Our Services -->
-    <div class="bg-[#149E4A]">
+    <div class="bg-[var(--color-theme2)]">
         <div class="container mx-auto p-4 md:py-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
 
                 <div class="flex items-center space-x-3 text-white">
                     <div
-                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[#DE0025]">
-                        <i class="fa-solid fa-thumbs-up text-md md:text-2xl text-[#DE0025]"></i>
+                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[var(--color-theme1)]">
+                        <i class="fa-solid fa-thumbs-up text-md md:text-2xl text-[var(--color-theme1)]"></i>
                     </div>
                     <div class="text-xs md:text-sm">
                         <h4>হাই-কোয়ালিটি পণ্য</h4>
@@ -1349,8 +1349,8 @@
                 </div>
                 <div class="flex items-center space-x-3 text-white">
                     <div
-                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[#DE0025]">
-                        <i class="fa-solid fa-headset text-md md:text-2xl text-[#DE0025]"></i>
+                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[var(--color-theme1)]">
+                        <i class="fa-solid fa-headset text-md md:text-2xl text-[var(--color-theme1)]"></i>
                     </div>
                     <div class="text-xs md:text-sm">
                         <h4>24/7 লাইভ চ্যাট</h4>
@@ -1359,8 +1359,8 @@
                 </div>
                 <div class="flex items-center space-x-3 text-white">
                     <div
-                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[#DE0025]">
-                        <i class="fa-solid fa-truck text-md md:text-2xl text-[#DE0025]"></i>
+                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[var(--color-theme1)]">
+                        <i class="fa-solid fa-truck text-md md:text-2xl text-[var(--color-theme1)]"></i>
                     </div>
                     <div class="text-xs md:text-sm">
                         <h4>এক্সপ্রেস শিপিং</h4>
@@ -1369,8 +1369,8 @@
                 </div>
                 <div class="flex items-center space-x-3 text-white">
                     <div
-                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[#DE0025]">
-                        <i class="fa-solid fa-lock text-md md:text-2xl text-[#DE0025]"></i>
+                        class="flex items-center justify-center h-10 md:h-16 w-10 md:w-16 bg-white rounded-full border-2 md:border-3 border-[var(--color-theme1)]">
+                        <i class="fa-solid fa-lock text-md md:text-2xl text-[var(--color-theme1)]"></i>
                     </div>
                     <div class="text-xs md:text-sm">
                         <h4>সিকিউর পেমেন্ট</h4>
@@ -1396,7 +1396,7 @@
     <!-- Mobile Menu -->
     <div class="w-full fixed bottom-0 lg:hidden bg-white z-40 py-2">
         <ul class="flex items-center justify-between px-4">
-            <div class="text-center text-[#DE0025]">
+            <div class="text-center text-[var(--color-theme1)]">
                 <i class="fa-solid fa-bars"></i>
                 <p class="text-xs">Home</p>
             </div>
@@ -1417,7 +1417,7 @@
     <!-- Message Box -->
     <div class="fixed bottom-13 right-2 lg:bottom-2 z-40 py-2 flex flex-col-reverse items-center gap-2">
         <div class="text-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden')">
-            <i class="fa-solid fa-comment-sms text-[#149E4A] text-3xl md:text-4xl lg:text-5xl"></i>
+            <i class="fa-solid fa-comment-sms text-[var(--color-theme2)] text-3xl md:text-4xl lg:text-5xl"></i>
         </div>
         <ul class="hidden flex flex-col items-center gap-1">
             <li>
@@ -1441,23 +1441,23 @@
                 <img src="assets/img/logo.png" alt="BEB GROUP LOGO" class="w-2/3">
                 <p>HORLINE NUMBER:
                     <b>
-                        <a href="tel:+88017000000000" class="hover:text-[#DE0025]">017000000000</a>,
-                        <a href="tel:+88017000000000" class="hover:text-[#DE0025]">017000000000</a>
+                        <a href="tel:+88017000000000" class="hover:text-[var(--color-theme1)]">017000000000</a>,
+                        <a href="tel:+88017000000000" class="hover:text-[var(--color-theme1)]">017000000000</a>
                     </b>
                 </p>
                 <p>EMAIL ADDRESS:
                     <b>
-                        <a href="mailto:info@beb.com.bd" class="hover:text-[#DE0025]">info@beb.com.bd</a>,
+                        <a href="mailto:info@beb.com.bd" class="hover:text-[var(--color-theme1)]">info@beb.com.bd</a>,
                         <a href="mailto:bebgroup.info@gmail.com"
-                            class="hover:text-[#DE0025]">bebgroup.info@gmail.com</a>
+                            class="hover:text-[var(--color-theme1)]">bebgroup.info@gmail.com</a>
                     </b>
                 </p>
                 <p>FOLLOW US:
                 <div class="flex items-center space-x-5 text-xl">
-                    <i class="fa-brands fa-facebook-f hover:text-[#DE0025]"></i>
-                    <i class="fa-brands fa-instagram hover:text-[#DE0025]"></i>
-                    <i class="fa-brands fa-linkedin-in hover:text-[#DE0025]"></i>
-                    <i class="fa-brands fa-youtube hover:text-[#DE0025]"></i>
+                    <i class="fa-brands fa-facebook-f hover:text-[var(--color-theme1)]"></i>
+                    <i class="fa-brands fa-instagram hover:text-[var(--color-theme1)]"></i>
+                    <i class="fa-brands fa-linkedin-in hover:text-[var(--color-theme1)]"></i>
+                    <i class="fa-brands fa-youtube hover:text-[var(--color-theme1)]"></i>
                 </div>
                 </p>
             </div>
